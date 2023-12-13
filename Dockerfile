@@ -12,7 +12,7 @@ RUN mkdir -p "/source/vaapi-amdgpu/lib/dri" \
     /source/vaapi-amdgpu/lib \
  && cd /usr/lib \
  && cp -a \
-    libLLVM-15*.so* \
+    libLLVM-17*.so* \
     libX11-xcb.so.1* \
     libXau.so.6* \
     libXdmcp.so.6* \
@@ -43,9 +43,9 @@ RUN mkdir -p "/source/vaapi-amdgpu/lib/dri" \
     /source/vaapi-amdgpu/lib \
  && mkdir -p /source/usr/share/libdrm \
  && cp -a /usr/share/libdrm/amdgpu.ids /source/usr/share/libdrm/ \
- && mkdir -p /source/etc/s6-overlay/s6-rc.d/svc-plex/ 
+ && mkdir -p /source/etc/s6-overlay/s6-rc.d/svc-plex/
 
-COPY run /source/etc/s6-overlay/s6-rc.d/svc-plex/ 
+COPY run /source/etc/s6-overlay/s6-rc.d/svc-plex/
 
 FROM scratch
 
